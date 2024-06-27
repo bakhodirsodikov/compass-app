@@ -1,0 +1,204 @@
+@import "../bootstrap/bootstrap";
+@import "./variables.scss";
+@import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "/node_modules/swiper/swiper";
+
+body{
+  height: 100vh;
+}
+.header-logo{
+  width: 119px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.navbar{
+  background: $nav-back ;
+}
+
+.navbar-nav{
+
+}
+
+.nav-links__wrapper{
+
+  li{
+    a{
+      margin-right: 10px;
+      text-decoration: none;
+      color: #ffff;
+
+      &:hover{
+        color: blue;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+.navbar-toggler{
+  width: 30px;
+  height: 30px;
+  color: #ffff;
+  padding: 0;
+  position: relative;
+  border: 0;
+  &:focus{
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+
+.navbar__btn-icon{
+  display: block;
+  height: 2px;
+  width: 80%;
+  background-color: #ffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+
+  &::before{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #ffff;
+    transform: translate(0, -8px);
+  }
+  &::after{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #ffff;
+    transform: translate(0, 6px);
+  }
+}
+
+.navbar-toggler-active{
+  transform: translate( -50%, -50%) rotate(-45deg);
+  transition: 0.7s;
+  transform-origin: center;
+
+  &::before{
+    transform: translate(0, 0) rotate(90deg);
+  }
+  &::after{
+    content: none;      
+  }
+}
+
+.sign-up__title{
+  width: 100%;
+  max-width: 620px;
+} 
+.sign-up__img{
+  width: 100%;
+  max-width: 532px;
+  padding: 10px 0 0 10px;
+  object-fit: cover;
+
+  img{
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+.sign-up__form > *{
+  padding: 5px 0;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    -moz-appearance:textfield;
+  }
+}
+
+.modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $modal-background;
+}
+.video-wrapper{
+    width: 100%;
+    max-width: 970px;
+    height: 100%;
+    max-height: 570px;
+    object-fit: cover;
+
+  .video{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.advantages-card{
+  width: 100%;
+  max-width: 362px;
+  height: 151px;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEEFF1;
+}
+
+.advantages-card{
+  
+  .img-wrapper{
+    width: 100%;
+    max-width: 59px;
+
+    img{
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .advantages-text{
+    width: 100%;
+    max-width: 247px;
+  }
+}
+
+.documents{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-creative .swiper-slide{
+  width: 100%;
+}
+
+.docs-wrapper{
+  width: 100%;
+  max-width: 340px;
+  height: 450px;
+
+  h5{
+    font-size: 31px;
+    color: $blue-text;
+  }
+  button{
+    width: 100%;
+  }
+
+}
+
+.swiper-wrapper{
+  padding-bottom: 20px;
+}
+
